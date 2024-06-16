@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\helper\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\helper\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\dto\\tokenrefresh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\dto\\tokenrefresh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\dto\\userauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\dto\\userauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|d:\\aptech\\semester3\\codehk3\\edunext_csharp\\edunextg1\\edunextg1\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73E64E63-8C4F-43B4-9839-3F76F23D2F3B}|EdunextG1\\EdunextG1.csproj|solutionrelative:edunextg1\\data\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +75,192 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JWT.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Helper\\JWT.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Helper\\JWT.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Helper\\JWT.cs",
+              "RelativeToolTip": "EdunextG1\\Helper\\JWT.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwCMAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:22:44.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Services\\UserService.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Services\\UserService.cs",
+              "RelativeToolTip": "EdunextG1\\Services\\UserService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAYwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:18:03.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "EdunextG1\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:12:30.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Services\\IServices\\IUserService.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Services\\IServices\\IUserService.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Services\\IServices\\IUserService.cs",
+              "RelativeToolTip": "EdunextG1\\Services\\IServices\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:10:37.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TokenRefresh.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\TokenRefresh.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\DTO\\TokenRefresh.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\TokenRefresh.cs",
+              "RelativeToolTip": "EdunextG1\\DTO\\TokenRefresh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:04:55.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\DTO\\LoginDTO.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "EdunextG1\\DTO\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:04:31.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\DTO\\RegisterDTO.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\RegisterDTO.cs",
+              "RelativeToolTip": "EdunextG1\\DTO\\RegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:03:59.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\DTO\\UserDTO.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "EdunextG1\\DTO\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:03:43.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Program.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Program.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Program.cs",
+              "RelativeToolTip": "EdunextG1\\Program.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAD0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T05:25:25.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserAuth.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\UserAuth.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\DTO\\UserAuth.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\DTO\\UserAuth.cs",
+              "RelativeToolTip": "EdunextG1\\DTO\\UserAuth.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:04:46.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "EdunextG1\\appsettings.Development.json",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\appsettings.Development.json",
+              "RelativeToolTip": "EdunextG1\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T06:02:30.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Models\\User.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Models\\User.cs",
+              "RelativeToolTip": "EdunextG1\\Models\\User.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T05:40:07.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Data\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "EdunextG1\\Data\\DatabaseContext.cs",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\Data\\DatabaseContext.cs",
+              "RelativeToolTip": "EdunextG1\\Data\\DatabaseContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T05:38:00.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\appsettings.json",
+              "RelativeDocumentMoniker": "EdunextG1\\appsettings.json",
+              "ToolTip": "D:\\APTECH\\Semester3\\CodeHK3\\EduNext_CSharp\\EdunextG1\\EdunextG1\\appsettings.json",
+              "RelativeToolTip": "EdunextG1\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T05:25:32.898Z",
+              "EditorCaption": ""
             }
           ]
         }
