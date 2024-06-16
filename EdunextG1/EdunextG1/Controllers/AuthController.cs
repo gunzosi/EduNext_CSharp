@@ -135,7 +135,7 @@ namespace EdunextG1.Controllers
                         new Claim(ClaimTypes.Role, user.Role),
                         new Claim(ClaimTypes.Email, user.Email)
                     }),
-                    Expires = DateTime.UtcNow.AddHours(1),
+                    Expires = DateTime.UtcNow.AddHours(24),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
                 };
 
