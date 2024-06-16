@@ -1,41 +1,46 @@
-﻿using EdunextG1.Data;
-using EdunextG1.DTO;
-using EdunextG1.Models;
-using EdunextG1.Services.IServices;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using EdunextG1.Data;
+using EdunextG1.Models;
+using EdunextG1.DTO;
+using EdunextG1.Services.IServices;
+using EdunextG1.Helper;
 
 namespace EdunextG1.Services
 {
     public class UserService : IUserService
     {
-        private readonly DatabaseContext _dbContext;
-        private readonly IConfiguration configuration;
+        private readonly DatabaseContext _context;
+        private readonly IConfiguration _configuration;
+        private readonly JWT _jwtHelper;
 
-        public UserService(DatabaseContext dbContext, IConfiguration configuration)
+        public UserService(DatabaseContext context, IConfiguration configuration, JWT jwtHelper)
         {
-            _dbContext = dbContext;
-            this.configuration = configuration;
+            _context = context;
+            _configuration = configuration;
+            _jwtHelper = jwtHelper;
         }
 
-        // Register a new user
-        public async Task<UserDTO> RegisterAsync(RegisterDTO registerDTO)
+        public async Task<UserDTO> RegisterAsync(RegisterDTO registerDto)
         {
-            if (await _dbContext.Users.AnyAsync(u => u.UserName == registerDTO.Username))
+            if (await _context.Users.AnyAsync(u => u.Email == registerDto.Email))
             {
-                throw new Exception("Username already exists");
+                throw new Exception("Email is already taken.");
             }
 
             var user = new User
             {
-                UserName = registerDTO.Username,
-                Password = BCrypt.Net.BCrypt.HashPassword(registerDTO.Password),
-                Email = registerDTO.Email,
-                Role = "User" // Set Default "User" Role
+                UserName = registerDto.Username,
+                Email = registerDto.Email,
+                Password = BCrypt.Net.BCrypt.HashPassword(registerDto.Password),
+                Role = "User" // Mặc định tất cả người dùng mới sẽ là User
             };
 
-            await _dbContext.Users.AddAsync(user);
-            await _dbContext.SaveChangesAsync();
-
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
 
             return new UserDTO
             {
@@ -44,19 +49,16 @@ namespace EdunextG1.Services
             };
         }
 
-        public async Task<string?> LoginAsync(LoginDTO loginDTO)
+        public async Task<string> LoginAsync(LoginDTO loginDto)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == loginDTO.Username);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.Password))
+            var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == loginDto.Email);
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
             {
-                throw new Exception("Invalid Username or Password");
+                throw new Exception("Invalid email or password.");
             }
 
-            /**
-             * @JWT - sẽ trả về JWT ở đây
-             * JWT class được viết trong Helper/JWT.cs
-             */
-            return null;
+            // Tạo JWT token sử dụng JwtHelper
+            return _jwtHelper.GenerateToken(user);
         }
     }
 }

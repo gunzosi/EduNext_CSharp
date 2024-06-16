@@ -46,15 +46,22 @@ namespace EdunextG1.Controllers
         {
             try
             {
-                var user = await _databaseContext.Users
-                    .FirstOrDefaultAsync(u => u.UserName == loginDto.Username);
-
-                if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
+                if (loginDto == null || string.IsNullOrWhiteSpace(loginDto.Email) || string.IsNullOrWhiteSpace(loginDto.Password))
                 {
-                    return Unauthorized(new
-                    {
-                        message = "Invalid Username or Password"
-                    });
+                    return BadRequest(new { message = "Email and Password cannot be null or empty" });
+                }
+
+                var user = await _databaseContext.Users
+                    .FirstOrDefaultAsync(u => u.Email == loginDto.Email);
+
+                if (user == null)
+                {
+                    return Unauthorized(new { message = "Invalid Email or Password" });
+                }
+
+                if (string.IsNullOrWhiteSpace(user.Password) || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
+                {
+                    return Unauthorized(new { message = "Invalid Email or Password" });
                 }
 
                 var tokenString = _jwtHelper.GenerateToken(user);

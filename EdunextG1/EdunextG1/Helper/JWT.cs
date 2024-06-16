@@ -16,9 +16,13 @@ namespace EdunextG1.Helper
         }
         public string GenerateToken(User user) 
         {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user), "User cannot be null");
+            }
             var jwtSettings = _configuration.GetSection("Jwt");
-            var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(jwtSettings["Keys"]);
+            var tokenHandler = new JwtSecurityTokenHandler();
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
