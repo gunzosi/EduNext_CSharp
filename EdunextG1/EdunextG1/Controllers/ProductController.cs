@@ -4,10 +4,6 @@ using EdunextG1.Services.IServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace EdunextG1.Controllers
 {
@@ -18,7 +14,6 @@ namespace EdunextG1.Controllers
     {
         private readonly IProductService _productService;
         private readonly IBlobService _blobService;
-        private readonly string _containerName;
 
         public ProductController(IProductService productService, IBlobService blobService)
         {
@@ -27,7 +22,7 @@ namespace EdunextG1.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous] // Cho phép tất cả mọi người truy cập đường dẫn này
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllProducts()
         {
             try
@@ -37,9 +32,10 @@ namespace EdunextG1.Controllers
                 {
                     data = products,
                     status = 200,
-                    message = "Success ! Show all Products"
+                    message = "Success! Show all Products"
                 });
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, new { message = ex.Message });
             }
@@ -60,9 +56,10 @@ namespace EdunextG1.Controllers
                 {
                     data = product,
                     status = 200,
-                    message = "Success ! Show Product by Id"
+                    message = "Success! Show Product by Id"
                 });
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, new { message = ex.Message });
             }
@@ -86,19 +83,20 @@ namespace EdunextG1.Controllers
                     var createdProduct = await _productService.CreateProductAsync(product);
                     return CreatedAtAction
                         (
-                            nameof(GetProductById), 
-                            new { id = createdProduct.Id }, 
+                            nameof(GetProductById),
+                            new { id = createdProduct.Id },
                             createdProduct
                         );
                 }
                 return BadRequest(new { message = "Invalid model" });
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, new { message = ex.Message });
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductUpdateDto productDto)
         {
             try
@@ -130,7 +128,7 @@ namespace EdunextG1.Controllers
                     {
                         data = updateProduct,
                         status = 201,
-                        message = "Success ! Update Product"
+                        message = "Success! Update Product"
                     });
                 }
                 return BadRequest();

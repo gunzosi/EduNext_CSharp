@@ -1,9 +1,7 @@
 ﻿using EdunextG1.Data;
 using EdunextG1.DTO;
 using EdunextG1.Helper;
-using EdunextG1.Repository.IRepository;
 using EdunextG1.Services.IServices;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,7 +34,8 @@ namespace EdunextG1.Controllers
                     status = 200,
                     message = "User registered successfully"
                 });
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
@@ -76,11 +75,11 @@ namespace EdunextG1.Controllers
         }
 
         [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken (TokenRefresh tokenRefresh)
+        public async Task<IActionResult> RefreshToken(TokenRefresh tokenRefresh)
         {
             try
             {
-                var user = await _databaseContext.Users.FirstOrDefaultAsync(u => 
+                var user = await _databaseContext.Users.FirstOrDefaultAsync(u =>
                     u.RefreshToken == tokenRefresh.RefreshToken &&
                     u.RefreshTokenExpiryTime > DateTime.UtcNow
                 );

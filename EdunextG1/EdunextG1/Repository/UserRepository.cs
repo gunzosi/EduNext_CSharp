@@ -6,7 +6,7 @@ using EdunextG1.Repository.IRepository;
 using EdunextG1.Services.IServices;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
+
 
 namespace EdunextG1.Repository
 {

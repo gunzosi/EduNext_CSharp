@@ -1,6 +1,5 @@
 ﻿using EdunextG1.Models;
 using EdunextG1.Repository.IRepository;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EdunextG1.Controllers
