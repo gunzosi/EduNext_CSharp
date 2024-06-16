@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EdunextG1.props" />
+</Project>
