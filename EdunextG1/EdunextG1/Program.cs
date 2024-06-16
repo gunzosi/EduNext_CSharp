@@ -3,7 +3,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.IdentityModel.Tokens;
+using EdunextG1.Helper;
+using Azure.Storage.Blobs;
+using EdunextG1.Services.IServices;
+using EdunextG1.Repository.IRepository;
+using EdunextG1.Repository;
+using EdunextG1.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,6 +56,20 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+// Azure BlobServiceClient cho AzureBlobStorage
+builder.Services.AddSingleton(ab =>
+    new BlobServiceClient(builder.Configuration.GetConnectionString("AzureBlob")
+));
+
+
+// Dependency Injection
+builder.Services.AddScoped<IUserService, IUserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+// ---------------------------
+
+// Đăng ký JwtHelper
+builder.Services.AddSingleton<JWT>();
 
 // --- Configuration for all Http access API
 builder.Services.AddCors(options =>
@@ -76,8 +95,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 // --- Middlewares 
-
-
+app.UseMiddleware<AdminMiddleware>();
 // ---------------
 
 app.MapControllers();
