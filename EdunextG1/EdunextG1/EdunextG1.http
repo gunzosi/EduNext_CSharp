@@ -1,0 +1,6 @@
+@EdunextG1_HostAddress = http://localhost:5274
+
+GET {{EdunextG1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
