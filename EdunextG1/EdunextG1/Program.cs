@@ -68,7 +68,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IBlobService, BlobService>();
+builder.Services.AddScoped<IBlobService, BlobService>();   
 
 // ---------------------------
 
@@ -108,7 +108,7 @@ app.UseCors();
 app.UseAuthorization();
 
 // --- Middlewares 
-app.UseMiddleware<AdminMiddleware>();
+//app.UseMiddleware<AdminMiddleware>();
 // ---------------
 
 app.MapControllers();

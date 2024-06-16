@@ -7,12 +7,13 @@ namespace EdunextG1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
 
-        public UserController(IUserRepository userRepository) {
+        public UserController(IUserRepository userRepository)
+        {
             _userRepository = userRepository;
         }
 
@@ -47,7 +48,8 @@ namespace EdunextG1.Controllers
         [HttpPost]
         public async Task<IActionResult> EditUser(int id, User user)
         {
-            if (id != user.Id) {
+            if (id != user.Id)
+            {
                 return BadRequest(new { message = "Invalid User ID" });
             }
 
@@ -69,13 +71,14 @@ namespace EdunextG1.Controllers
                     });
                 }
                 return BadRequest(new { message = "Invalid User Data" });
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 return StatusCode(500, new { message = ex.Message });
             }
-
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             try
@@ -89,9 +92,10 @@ namespace EdunextG1.Controllers
                 await _userRepository.DeleteUser(id);
                 return Ok(new { message = "User deleted successfully" });
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                return StatusCode(500, new {message = ex.Message});
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 

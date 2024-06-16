@@ -1,4 +1,5 @@
 ﻿using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using EdunextG1.Services.IServices;
 
 namespace EdunextG1.Services
@@ -34,6 +35,23 @@ namespace EdunextG1.Services
             var blobClient = containerClient.GetBlobClient(blobName);
 
             await blobClient.DeleteIfExistsAsync();
+        }
+
+        public async Task<string> UploadBlobWithContentTypeAsync(IFormFile file, string contentType)
+        {
+            var containerClient = _blobServiceClient.GetBlobContainerClient(_containerName);
+            var blobClient = containerClient.GetBlobClient(Guid.NewGuid().ToString() + "_" + file.FileName);
+            var blobHttpHeaders = new BlobHttpHeaders { ContentType = contentType };
+
+            using (var stream = file.OpenReadStream())
+            {
+                await blobClient.UploadAsync(stream, new BlobUploadOptions
+                {
+                    HttpHeaders = blobHttpHeaders
+                });
+            }
+
+            return blobClient.Uri.ToString();
         }
     }
 }

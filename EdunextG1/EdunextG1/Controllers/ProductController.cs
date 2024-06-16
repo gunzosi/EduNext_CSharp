@@ -21,6 +21,25 @@ namespace EdunextG1.Controllers
             _blobService = blobService;
         }
 
+        // -- Helper Function 
+        private static string GetContentType(IFormFile file)
+        {
+            // ToLowerInvariant 
+            var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+            return extension switch
+            {
+                ".jpg" or ".jpeg" => "image/jpeg",
+                ".png" => "image/png",
+                ".gif" => "image/gif",
+                ".bmp" => "image/bmp",
+                _ => "application/octet-stream"
+            };
+        }
+
+
+        // --------------------------------
+
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetAllProducts()
@@ -66,29 +85,44 @@ namespace EdunextG1.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateProduct([FromForm] ProductCreateDto productDto)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var imageUrl = await _blobService.UploadBlobAsync(productDto.Image);
+                    string imageUrl = null;
+                    if (productDto.Image != null)
+                    {
+                        var contentType = GetContentType(productDto.Image);
+                        imageUrl = await _blobService.UploadBlobWithContentTypeAsync(productDto.Image, contentType);
+                    }
                     var product = new Product
                     {
                         Name = productDto.Name,
                         Description = productDto.Description,
                         Price = productDto.Price,
-                        ImageUrl = imageUrl,
+                        ImageUrl = imageUrl
+
                     };
+
                     var createdProduct = await _productService.CreateProductAsync(product);
-                    return CreatedAtAction
-                        (
-                            nameof(GetProductById),
-                            new { id = createdProduct.Id },
-                            createdProduct
-                        );
+                    return CreatedAtAction(
+                        nameof(GetProductById),
+                        new
+                        {
+                            id = createdProduct.Id
+                        },
+                        new
+                        {
+                            data = createdProduct,
+                            status = 201,
+                            message = "Success! Create Product"
+                        }
+                    );
                 }
-                return BadRequest(new { message = "Invalid model" });
+                return BadRequest(new { message = "Invalid Model or Image" });
             }
             catch (Exception ex)
             {
@@ -97,6 +131,7 @@ namespace EdunextG1.Controllers
         }
 
         [HttpPut("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductUpdateDto productDto)
         {
             try
@@ -140,6 +175,7 @@ namespace EdunextG1.Controllers
         }
 
         [HttpDelete("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             try
