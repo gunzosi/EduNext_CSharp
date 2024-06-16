@@ -1,4 +1,5 @@
-﻿using EdunextG1.Models;
+﻿using EdunextG1.DTO;
+using EdunextG1.Models;
 using EdunextG1.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -45,32 +46,33 @@ namespace EdunextG1.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> EditUser(int id, User user)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> EditUser(int id, UserUpdateDTO userUpdateDTO)
         {
-            if (id != user.Id)
+            if (id != userUpdateDTO.Id)
             {
                 return BadRequest(new { message = "Invalid User ID" });
             }
 
             try
             {
-                if (ModelState.IsValid)
+                var user = await _userRepository.GetUserById(id);
+                if (user == null)
                 {
-                    var userExisted = await _userRepository.GetUserById(id);
-                    if (userExisted == null)
-                    {
-                        return NotFound(new { message = "User not found" });
-                    }
-                    var userUpdated = await _userRepository.UpdateUser(user);
-                    return Ok(new
-                    {
-                        data = userUpdated,
-                        status = 201,
-                        message = "User updated successfully"
-                    });
+                    return NotFound(new { message = "User not found" });
                 }
-                return BadRequest(new { message = "Invalid User Data" });
+
+                // Update
+                user.UserName = userUpdateDTO.Username;
+                user.Role = userUpdateDTO.Role;
+
+                var updatedUser = await _userRepository.UpdateUser(user);
+                return Ok(new
+                {
+                    data = updatedUser,
+                    status = 200,
+                    message = "User updated successfully"
+                });
             }
             catch (Exception ex)
             {
