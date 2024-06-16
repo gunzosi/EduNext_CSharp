@@ -9,6 +9,7 @@ using EdunextG1.Services.IServices;
 using EdunextG1.Repository.IRepository;
 using EdunextG1.Repository;
 using EdunextG1.Middleware;
+using EdunextG1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,8 +64,11 @@ builder.Services.AddSingleton(ab =>
 
 
 // Dependency Injection
-builder.Services.AddScoped<IUserService, IUserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IBlobService, BlobService>();
 
 // ---------------------------
 
