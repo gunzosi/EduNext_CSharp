@@ -44,7 +44,7 @@ namespace EdunextG1.Services
             };
         }
 
-        public async Task<string> LoginAsync (LoginDTO loginDTO)
+        public async Task<string?> LoginAsync(LoginDTO loginDTO)
         {
             var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == loginDTO.Username);
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.Password))
@@ -52,6 +52,11 @@ namespace EdunextG1.Services
                 throw new Exception("Invalid Username or Password");
             }
 
-
+            /**
+             * @JWT - sẽ trả về JWT ở đây
+             * JWT class được viết trong Helper/JWT.cs
+             */
+            return null;
+        }
     }
 }
